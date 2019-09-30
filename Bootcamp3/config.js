@@ -7,7 +7,7 @@ module.exports = {
       uri: 'mongodb+srv://boba21:applepen@cen3031-rraxq.mongodb.net/test?retryWrites=true&w=majority'//place the URI of your mongo database here.
     }, 
     openCage: {
-      key: '' //place your openCage public key here - Sign-up for a free key https://opencagedata.com/
+      key: '73d0a46fd4394ad0818a77cdf988c5c5' //place your openCage public key here - Sign-up for a free key https://opencagedata.com/
     },
     port: 8080
   };
