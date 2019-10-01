@@ -27,7 +27,7 @@ module.exports.init = function() {
 
 /* The next three middleware are important to the API that we are bulding */
 
-  /* Request Handler for route /api/lisings
+  /* Request Handler for route /api/listings
      Update the code to meet the required format - app.use('/api/listings', appropriateMiddlewWare)
      use the listings router middleware for requests to the api 
      check the variables list above
@@ -45,6 +45,7 @@ module.exports.init = function() {
   /* Request Handeler for all other routes
      Sends a response (res) to go to the homepage for all routes not specified */ 
   app.all('/*', function(req, res) {
+    res.status(404).send('Bad gateway error'); //change to send to homepage
    
    /*Add YOUR CODE HERE 
       see https://expressjs.com/en/api.html#res.sendFile
