@@ -28,11 +28,11 @@ module.exports.init = function() {
 /* The next three middleware are important to the API that we are bulding */
 
   /* Request Handler for route /api/listings
-     Update the code to meet the required format - app.use('/api/listings', appropriateMiddlewWare)
-     use the listings router middleware for requests to the api 
-     check the variables list above
+     CHECK! Update the code to meet the required format - app.use('/api/listings', appropriateMiddlewWare)
+     CHECK! use the listings router middleware for requests to the api 
+     CHECK! check the variables list above
   */
-  app.use('/api/listings');
+  app.use('/api/listings', listingsRouter);
 
 
    /* Request Handler for coordinates
