@@ -45,8 +45,7 @@ module.exports.init = function() {
   /* Request Handeler for all other routes
      Sends a response (res) to go to the homepage for all routes not specified */ 
   app.all('/*', function(req, res) {
-    res.status(404).send('Bad gateway error'); //change to send to homepage
-   
+       
    /*Add YOUR CODE HERE 
       see https://expressjs.com/en/api.html#res.sendFile
       see https://nodejs.org/api/path.html
@@ -54,6 +53,8 @@ module.exports.init = function() {
       If no path segments are passed, path.resolve() will return the absolute path of the current working directory.
    */
    //res.sendFile(path.resolve(...));
+    res.sendFile(path.resolve('/client/index', './html'));
+
   });
   
   return app;
