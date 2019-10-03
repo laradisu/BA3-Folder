@@ -91,14 +91,17 @@ exports.delete = function(req, res) {
   var listing = req.listing;
 
   /* Add your code to remove the listings */
-  listing.remove(function(err){
-    if (err) {
-      console.log(err);
+  Listing.findById(req.params._id, function (err, listing){
+    if (err){
       res.status(400).send(err);
     }
-    else {
-      res.end();
+    else{
+      res.json(listing);
     }
+  Listing.deleteOne(listing,function(err){
+    if (err)
+    return handleError(err);
+  });  
   });
 };
 
